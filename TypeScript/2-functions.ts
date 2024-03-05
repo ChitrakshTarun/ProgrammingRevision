@@ -36,3 +36,13 @@ let add = (a: number, b: number = 1) => {
 function getUpperTSString(val: string): string {
 	return val.toUpperCase();
 }
+
+// Good practice to explicitly mention void here, even though TypeScript will assign it automatically.
+function consoleError(message: string): void {
+	console.log(message);
+}
+
+// Function that never returns anything.
+function handleError(message: string): never {
+	throw new Error(message);
+}
